@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-playfair: var(--font-playfair);
+    --font-cormorant: var(--font-cormorant);
+    --font-inter: var(--font-inter);
+    --font-cinzel: var(--font-cinzel);
+    --font-great-vibes: var(--font-great-vibes);
+  }
+
+  body {
+    font-family: var(--font-inter), sans-serif;
+    color: #2D241E;
+    background-color: #FAF7F2;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: var(--font-playfair), var(--font-cormorant), Georgia, serif;
+  }
+
+  .font-cormorant-luxury {
+    font-family: var(--font-cormorant), Georgia, serif;
+  }
+
+  .font-cinzel-luxury {
+    font-family: var(--font-cinzel), serif;
+  }
+
+  .font-script-luxury {
+    font-family: var(--font-great-vibes), cursive;
+  }
+
+  .font-sans-clean {
+    font-family: var(--font-inter), sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Champagne Gold & Paper Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #C59A45 35%, #F5E2B3 55%, #B88628 80%, #E3C380 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #C59A45 40%, #B88628 75%, #D6AC56 100%);
+}
+
+.gold-shadow {
+  box-shadow: 0 10px 30px -10px rgba(184, 134, 40, 0.35);
+}
+
+.gold-shimmer-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.gold-shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: shimmer 4s infinite cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes shimmer {
+  0% {
+    left: -60%;
+  }
+  20% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* Custom luxury scrollbar for Ivory & Gold theme */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C59A45;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DFBA73;
+}
+
+@keyframes musicBar {
+  0%, 100% {
+    height: 3px;
+  }
+  50% {
+    height: 14px;
+  }
+}
+
