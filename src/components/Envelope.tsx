@@ -79,10 +79,20 @@ export default function Envelope({ isOpening, onOpen }: EnvelopeProps) {
           <span className="font-cinzel-luxury text-[8px] sm:text-[9px] tracking-[0.3em] uppercase text-[#A37E36] font-medium pt-1">
             Engagement Ceremony
           </span>
-          <h4 className="font-serif-luxury text-xl sm:text-2xl text-[#2B231C] mt-0.5 leading-none font-medium tracking-wide">
-            {INVITATION_CONFIG.groomName} & {INVITATION_CONFIG.brideName}
-          </h4>
-          <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#C59A45]/60 to-transparent my-1.5" />
+          <div className="flex flex-col items-center justify-center my-0.5">
+            <h4 className="font-serif-luxury text-base sm:text-lg text-[#2B231C] leading-tight font-medium tracking-wide">
+              {INVITATION_CONFIG.groomName} & {INVITATION_CONFIG.brideName}
+            </h4>
+            {INVITATION_CONFIG.secondCouple && (
+              <>
+                <span className="font-serif-luxury text-[10px] text-[#C59A45] italic my-0.5">&</span>
+                <h4 className="font-serif-luxury text-base sm:text-lg text-[#2B231C] leading-tight font-medium tracking-wide">
+                  {INVITATION_CONFIG.secondCouple.groomName} & {INVITATION_CONFIG.secondCouple.brideName}
+                </h4>
+              </>
+            )}
+          </div>
+          <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#C59A45]/60 to-transparent my-1" />
           <span className="font-cormorant-luxury italic text-[11px] sm:text-xs text-[#6F5B49] opacity-90">
             {INVITATION_CONFIG.date}
           </span>

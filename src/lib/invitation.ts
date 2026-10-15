@@ -17,6 +17,10 @@ export interface EngagementInvitationConfig {
   // Couple Information
   groomName: string;
   brideName: string;
+  secondCouple?: {
+    groomName: string;
+    brideName: string;
+  };
 
   // Screen 1: Opening Invitation
   openingSubheading: string;
@@ -81,6 +85,10 @@ export const INVITATION_CONFIG: EngagementInvitationConfig = {
   // --- COUPLE NAMES ---
   groomName: "Afaq",
   brideName: "Aman",
+  secondCouple: {
+    groomName: "Saud",
+    brideName: "Wajeeha",
+  },
 
   // --- SCREEN 1: OPENING INVITATION TEXT ---
   openingSubheading: "Two Hearts, One Beautiful Journey",
@@ -170,7 +178,7 @@ export const INVITATION_CONFIG: EngagementInvitationConfig = {
   closingText: "We Look Forward to Celebrating With You",
 
   // --- META DETAILS ---
-  metaTitle: "Engagement Invitation | Two Hearts, One Promise",
+  metaTitle: "Engagement Invitation | Afaq & Aman & Saud & Wajeeha",
   metaDescription:
     "You are warmly invited to celebrate our Engagement Ceremony. Join us for an evening of love, promise, and celebration.",
 };
@@ -203,6 +211,7 @@ export const INVITATION_DATA = {
     name: INVITATION_CONFIG.brideName,
     fullName: INVITATION_CONFIG.brideName,
   },
+  secondCouple: INVITATION_CONFIG.secondCouple,
   eventTitle: "Engagement Ceremony",
   familyInvitationText: INVITATION_CONFIG.familyText,
   invitationStatement: INVITATION_CONFIG.invitationText,

@@ -112,7 +112,7 @@ export default function DetailsScreen({ onBackToEnvelope }: DetailsScreenProps) 
             transition={{ duration: 0.8, delay: 0.3 }}
             className="my-5 sm:my-7 flex flex-col items-center justify-center w-full"
           >
-            <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#281F17] leading-tight tracking-wide drop-shadow-sm px-2">
+            <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#281F17] leading-tight tracking-wide drop-shadow-sm px-2 text-center">
               <span className="text-gold-gradient inline-block capitalize font-serif-luxury font-medium tracking-normal">
                 {INVITATION_CONFIG.groomName}
               </span>
@@ -123,6 +123,32 @@ export default function DetailsScreen({ onBackToEnvelope }: DetailsScreenProps) 
                 {INVITATION_CONFIG.brideName}
               </span>
             </h2>
+
+            {INVITATION_CONFIG.secondCouple && (
+              <>
+                {/* Elegant Royal Gold Center Divider */}
+                <div className="flex items-center justify-center gap-3 my-2 sm:my-3 w-full max-w-xs">
+                  <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#C59A45]/40 to-[#C59A45]/70" />
+                  <span className="font-serif-luxury italic text-xl sm:text-2xl text-[#C59A45] font-light">
+                    &amp;
+                  </span>
+                  <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#C59A45]/40 to-[#C59A45]/70" />
+                </div>
+
+                {/* Second Couple: Saud & Wajeeha */}
+                <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#281F17] leading-tight tracking-wide drop-shadow-sm px-2 text-center">
+                  <span className="text-gold-gradient inline-block capitalize font-serif-luxury font-medium tracking-normal">
+                    {INVITATION_CONFIG.secondCouple.groomName}
+                  </span>
+                  <span className="font-serif-luxury text-2xl sm:text-3xl md:text-4xl text-[#C59A45] mx-2 sm:mx-4 font-light italic inline-block align-middle">
+                    &
+                  </span>
+                  <span className="text-gold-gradient inline-block capitalize font-serif-luxury font-medium tracking-normal">
+                    {INVITATION_CONFIG.secondCouple.brideName}
+                  </span>
+                </h2>
+              </>
+            )}
           </motion.div>
 
           {/* Romantic Quote: "Two hearts. One promise. A lifetime together." */}
