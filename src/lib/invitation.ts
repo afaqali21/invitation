@@ -83,7 +83,7 @@ export interface EngagementInvitationConfig {
 
 export const INVITATION_CONFIG: EngagementInvitationConfig = {
   // --- COUPLE NAMES ---
-  groomName: "Afaq",
+  groomName: "Ali",
   brideName: "Aman",
   secondCouple: {
     groomName: "Saud",

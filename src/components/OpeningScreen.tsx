@@ -69,7 +69,7 @@ export default function OpeningScreen({ isOpening, onOpen }: OpeningScreenProps)
         initial={{ opacity: 0, scale: 0.94 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        className="relative z-20 my-auto py-6 sm:py-8 flex items-center justify-center w-full"
+        className="relative z-20  py-6 sm:py-8 flex items-center justify-center w-full"
       >
         <Envelope isOpening={isOpening} onOpen={onOpen} />
       </motion.div>
